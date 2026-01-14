@@ -43,9 +43,7 @@ export const AgGridTable: React.FC<AgGridTableProps>=({
   // Diagnostic: check that React has hooks on the object
   
   const [gridApi, setGridApi] = React.useState<any>('');
-  console.log("AgGrid api:", gridApi);
   const onGridReady = (params: any) => {
-    console.log('[AgGridTable] onGridReady', params);
     setGridApi(params.api);
   };
 
