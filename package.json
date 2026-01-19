@@ -29,10 +29,11 @@
     "dist"
   ],
   "dependencies": {
-    "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-query": "^5.90.16",
+    "@tanstack/react-table": "^8.21.3",
     "ag-grid-community": "^35.0.0",
-    "ag-grid-react": "^35.0.0"
+    "ag-grid-react": "^35.0.0",
+    "axios": "^1.13.2"
   },
   "peerDependencies": {
     "react": "^19.2.3",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^12.3.0",
     "@testing-library/dom": "^10.4.1",
