@@ -50,6 +50,80 @@ export default [
     },
   },
   {
+    input: 'src/components/materialui/index.ts',
+    output: [
+      {
+        file: 'dist/components/materialui/index.js',
+        format: 'cjs',
+        sourcemap: false,
+        exports: 'named',
+      }
+    ],
+    plugins: [
+      json(),
+      resolve({
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      }),
+      commonjs({
+        include: /node_modules/,
+      }),
+      babel({
+        babelHelpers: 'bundled',
+        exclude: 'node_modules/**',
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }),
+      typescript({
+        tsconfig: './tsconfig.json',
+        declaration: true,
+        sourceMap: false,
+        rootDir: 'src/components/materialui',
+        outDir: 'dist/components/materialui',
+        declarationDir: 'dist/components/materialui',
+        exclude: ['node_modules/**']
+      }),
+    ],
+    external: (id) => {
+      return /^(react|react-dom|react\/|react\/jsx-runtime|@mui\/|@emotion\/)/.test(id);
+    },
+  },
+  {
+    input: 'src/components/msal/index.ts',
+    output: [
+      {
+        file: 'dist/components/msal/index.js',
+        format: 'cjs',
+        sourcemap: false,
+        exports: 'named',
+      }
+    ],
+    plugins: [
+      json(),
+      resolve({
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      }),
+      commonjs({
+        include: /node_modules/,
+      }),
+      babel({
+        babelHelpers: 'bundled',
+        exclude: 'node_modules/**',
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }),
+      typescript({
+        tsconfig: './tsconfig.json',
+        declaration: true,
+        sourceMap: false,
+        rootDir: 'src/components/msal',
+        outDir: 'dist/components/msal',
+        declarationDir: 'dist/components/msal',
+        exclude: ['node_modules/**']
+      }),
+    ],
+    external: (id) => {
+      return /^(react|react-dom|react\/|react\/jsx-runtime|@azure\/)/.test(id);
+    },
+  },
+  {
     input: 'src/tanstackquery/index.ts',
     output: [
       {
@@ -83,7 +157,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id) || id === 'react/jsx-runtime';
+      return /^(react|react-dom|react\/|react\/jsx-runtime|@tanstack\/|axios)/.test(id);
     },
   },
   {

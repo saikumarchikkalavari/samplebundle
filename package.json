@@ -18,6 +18,18 @@
       "require": "./dist/components/aggrid/index.js",
       "default": "./dist/components/aggrid/index.js"
     },
+    "./materialui": {
+      "types": "./dist/components/materialui/index.d.ts",
+      "import": "./dist/components/materialui/index.js",
+      "require": "./dist/components/materialui/index.js",
+      "default": "./dist/components/materialui/index.js"
+    },
+    "./msal": {
+      "types": "./dist/components/msal/index.d.ts",
+      "import": "./dist/components/msal/index.js",
+      "require": "./dist/components/msal/index.js",
+      "default": "./dist/components/msal/index.js"
+    },
     "./tanstackquery": {
       "types": "./dist/tanstackquery/index.d.ts",
       "import": "./dist/tanstackquery/index.js",
@@ -28,14 +40,18 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
+    "@azure/msal-browser": "^5.0.2",
+    "@azure/msal-react": "^5.0.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.7",
     "@tanstack/react-query": "^5.90.16",
     "@tanstack/react-table": "^8.21.3",
     "ag-grid-community": "^35.0.0",
     "ag-grid-react": "^35.0.0",
-    "axios": "^1.13.2"
-  },
-  "peerDependencies": {
+    "axios": "^1.13.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   },
