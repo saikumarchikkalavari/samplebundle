@@ -83,7 +83,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime|@mui\/|@emotion\/)/.test(id);
+      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id);
     },
   },
   {
@@ -120,7 +120,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime|@azure\/)/.test(id);
+      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id);
     },
   },
   {
@@ -157,7 +157,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime|@tanstack\/|axios)/.test(id);
+      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id);
     },
   },
   {
