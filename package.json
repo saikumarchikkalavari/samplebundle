@@ -40,7 +40,9 @@
   "files": [
     "dist"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@mui/icons-material": "^7.3.7"
+  },
   "peerDependencies": {
     "@azure/msal-browser": "^5.0.2",
     "@azure/msal-react": "^5.0.2",

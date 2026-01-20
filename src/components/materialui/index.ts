@@ -80,6 +80,21 @@ export {
   Popper,
 } from '@mui/material';
 
+// Export Material UI Icons
+export {
+  Dashboard as DashboardIcon,
+  ShoppingCart as ShoppingCartIcon,
+  People as PeopleIcon,
+  BarChart as BarChartIcon,
+  Layers as LayersIcon,
+  AccountCircle,
+  Login,
+  Logout,
+  CheckCircle,
+  Info,
+  Warning,
+} from '@mui/icons-material';
+
 // Export types
 export type {
   ButtonProps,
