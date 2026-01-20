@@ -83,7 +83,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id);
+      return /^(react|react-dom|react\/|react\/jsx-runtime|axios)/.test(id);
     },
   },
   {
@@ -120,7 +120,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id);
+      return /^(react|react-dom|react\/|react\/jsx-runtime|axios)/.test(id);
     },
   },
   {
@@ -157,7 +157,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id);
+      return /^(react|react-dom|react\/|react\/jsx-runtime|axios)/.test(id);
     },
   },
   {
@@ -200,7 +200,7 @@ export default [
       }),
     ],
     external: (id) => {
-      return /^(react|react-dom|react\/|react\/jsx-runtime)/.test(id) || id === 'react/jsx-runtime';
+      return /^(react|react-dom|react\/|react\/jsx-runtime|axios)/.test(id) || id === 'react/jsx-runtime';
     },
   }
 ];
