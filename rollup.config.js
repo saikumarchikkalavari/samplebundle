@@ -5,6 +5,7 @@ import typescript from '@rollup/plugin-typescript';
 import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import json from '@rollup/plugin-json';
+import terser from '@rollup/plugin-terser';
 
 export default [
   {
@@ -42,6 +43,16 @@ export default [
       postcss({
         extract: true,
         extensions: ['.css']
+      }),
+      terser({
+        compress: {
+          drop_console: false,
+          drop_debugger: true,
+          pure_funcs: ['console.log'],
+        },
+        mangle: {
+          reserved: ['react', 'React'],
+        },
       }),
     ],
     external: (id) => {
@@ -81,6 +92,16 @@ export default [
         declarationDir: 'dist/components/materialui',
         exclude: ['node_modules/**']
       }),
+      terser({
+        compress: {
+          drop_console: false,
+          drop_debugger: true,
+          pure_funcs: ['console.log'],
+        },
+        mangle: {
+          reserved: ['react', 'React'],
+        },
+      }),
     ],
     external: (id) => {
       return /^(react|react-dom|react\/|react\/jsx-runtime|axios)/.test(id);
@@ -118,16 +139,26 @@ export default [
         declarationDir: 'dist/components/msal',
         exclude: ['node_modules/**']
       }),
+      terser({
+        compress: {
+          drop_console: false,
+          drop_debugger: true,
+          pure_funcs: ['console.log'],
+        },
+        mangle: {
+          reserved: ['react', 'React'],
+        },
+      }),
     ],
     external: (id) => {
       return /^(react|react-dom|react\/|react\/jsx-runtime|axios)/.test(id);
     },
   },
   {
-    input: 'src/tanstackquery/index.ts',
+    input: 'src/components/tanstackquery/index.ts',
     output: [
       {
-        file: 'dist/tanstackquery/index.js',
+        file: 'dist/components/tanstackquery/index.js',
         format: 'cjs',
         sourcemap: false,
         exports: 'named',
@@ -150,10 +181,20 @@ export default [
         tsconfig: './tsconfig.json',
         declaration: true,
         sourceMap: false,
-        rootDir: 'src/tanstackquery',
-        outDir: 'dist/tanstackquery',
-        declarationDir: 'dist/tanstackquery',
+        rootDir: 'src/components/tanstackquery',
+        outDir: 'dist/components/tanstackquery',
+        declarationDir: 'dist/components/tanstackquery',
         exclude: ['node_modules/**']
+      }),
+      terser({
+        compress: {
+          drop_console: false,
+          drop_debugger: true,
+          pure_funcs: ['console.log'],
+        },
+        mangle: {
+          reserved: ['react', 'React'],
+        },
       }),
     ],
     external: (id) => {
@@ -197,6 +238,16 @@ export default [
         outDir: 'dist',
         declarationDir: 'dist',
         exclude: ['node_modules/**']
+      }),
+      terser({
+        compress: {
+          drop_console: false,
+          drop_debugger: true,
+          pure_funcs: ['console.log'],
+        },
+        mangle: {
+          reserved: ['react', 'React'],
+        },
       }),
     ],
     external: (id) => {

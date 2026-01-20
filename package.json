@@ -31,10 +31,10 @@
       "default": "./dist/components/msal/index.js"
     },
     "./tanstackquery": {
-      "types": "./dist/tanstackquery/index.d.ts",
-      "import": "./dist/tanstackquery/index.js",
-      "require": "./dist/tanstackquery/index.js",
-      "default": "./dist/tanstackquery/index.js"
+      "types": "./dist/components/tanstackquery/index.d.ts",
+      "import": "./dist/components/tanstackquery/index.js",
+      "require": "./dist/components/tanstackquery/index.js",
+      "default": "./dist/components/tanstackquery/index.js"
     }
   },
   "files": [
@@ -67,6 +67,7 @@
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.3.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
